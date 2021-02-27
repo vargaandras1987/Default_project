@@ -3,11 +3,18 @@
 
 namespace controller;
 
+use core\twig\TwigConfigure;
+
 class PageNotFoundController
 {
-  public function __construct()
+  public static function getPageNotFoundPath()
   {
-      header("Location:..\\..\\public\\html\\PageNotFound.html");
+      echo TwigConfigure::getTwigEnviroment()->render('pagenotfound.twig');
+
+
+
+     // header("Location:..\\..\\public\\html\\PageNotFound.html");
+
   }
 }
 
